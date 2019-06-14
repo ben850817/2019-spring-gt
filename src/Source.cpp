@@ -3,6 +3,7 @@
 #include "string.h"
 #include <stdlib.h>
 #include"network_manager.h"
+#include"path.h"
 
 void readFile(const char* filename);
 int Min_W_Matching(int, int);
@@ -85,7 +86,7 @@ int main(int argc, char *argv[])
 	tracePath();
 
 
-	system("pause");
+	//system("pause");
 	return 0;
 }
 void readFile(const char *filename)
