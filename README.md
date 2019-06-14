@@ -24,9 +24,7 @@ Function:
   (a)readFile為讀檔。
   
   (b)Min_W_Matching為最小權重匹配，最小權重匹配使用遞迴方式排列出所有匹配可能，function一開始會使用start變數作為起始點，從int i = start + 1
-  
 開始進行匹配，然後將被選中的奇點和start + 1做交換，然後進入下一個遞迴function重複上述動作，當start為奇點list的倒數第二個時，遞迴中止，若當下
-
 的奇點排序方式的總體權重小於min_weight，則記錄此種排列方式。
 
   (c)Hierholzer為遞迴尋找歐拉環，會先找出任意一環，然後再從此環進行延伸。此function回傳節點陣列。
@@ -54,5 +52,4 @@ Main:
   (b)接下來會找出節點間的最短路徑。
   
   (c)計算奇點數目，變數ovindex為奇點的數目，若奇點數目不為0(if(ovindex != 0))，則會對奇點先進行最小權重匹配並且將匹配邊加入原圖，然後再尋找歐
-  
 拉環(euler_cycle = Hierholzer())。
